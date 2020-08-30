@@ -46,10 +46,10 @@ class App extends React.Component {
       <h1 className="text-center mt-4" id="title">Markdown Converter</h1><hr />
       <section className="row">
         <div className="col">
-          <h2>Editor</h2><hr />
+          <h2 className="sub-title">Editor</h2><hr />
            <textarea className="form-control" id="editor" value={text} onChange={this.handleChange}/></div>
           <div className="col">
-          <h2>Preview</h2><hr />
+          <h2 id="titlePreview" className="sub-title">Preview</h2><hr />
             <div  className="form-control" id="preview" dangerouslySetInnerHTML={{__html:markdown}}/>
         </div>
     </section>
