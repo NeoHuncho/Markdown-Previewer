@@ -22,7 +22,6 @@ body{
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  color: #fff;
   height: 100%;
   width: 100%;
   border-radius: 4px;
@@ -35,9 +34,14 @@ body{
 #editor,#preview{
   background: $lighterBase;
   box-shadow: $shadow;
+  min-height:50vh;
+  min-width: 30vw;
 }
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .row{display:inline};
   #preview{margin-top:20px;}
+  }
+  #preview{
+    padding:2px;
   }
