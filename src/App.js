@@ -4,8 +4,11 @@ import marked from 'marked';
 const initialState=`
 this is a paragraph
 
+**This is a bolded text**
+
+> Block Quotes!
 # This is a H1
-# This is a H2
+## This is a H2
 
 - list first item
 - list second item
@@ -37,7 +40,7 @@ class App extends React.Component {
   }
   render() { 
     const {text}=this.state;
-    const markdown =marked(text);
+    const markdown =marked(text, {breaks: true});
     return ( 
       
       <div id="app">
