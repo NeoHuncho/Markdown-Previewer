@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.scss';
 import marked from 'marked';
-const initialState=`
-this is a paragraph
+const initialState=`this is a paragraph
 
 **This is a bolded text**
 
@@ -44,14 +43,14 @@ class App extends React.Component {
     return ( 
       
       <div id="app">
-      <h2 className="text-center mt-4" id="title">Convert your Markdown</h2>
+      <h1 className="text-center mt-4" id="title">Markdown Converter</h1><hr />
       <section className="row">
         <div className="col">
-          <h2>Editor</h2>
+          <h2>Editor</h2><hr />
            <textarea className="form-control" id="editor" value={text} onChange={this.handleChange}/></div>
           <div className="col">
-          <h2>Preview</h2>
-            <div className="rounded" id="preview" dangerouslySetInnerHTML={{__html:markdown}}/>
+          <h2>Preview</h2><hr />
+            <div  className="form-control" id="preview" dangerouslySetInnerHTML={{__html:markdown}}/>
         </div>
     </section>
    </div>
